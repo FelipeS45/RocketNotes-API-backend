@@ -1,10 +1,8 @@
-# Para instalar as dependências do Node.js (node_modules) quando o projeto for puxado do Github
+# Para instalar as dependências do Node.js (node_modules) sempre quando o projeto for puxado do Github
 
 npm install
 
-### Não precisa instalar o Express nem o Nodemon quando der pull do Github do projeto, pois já vêm instalados
-
-# Para rodar o servidor com Nodemon
+# Para rodar o servidor com Nodemon (deixar rodando em um terminal e usar outro para comandos)
 
 npm run dev 
 
@@ -19,3 +17,9 @@ usar URL: localhost:3333/users
 ### Insomnia consigurado 
 
 URL (BASE_URL) criada dentro do ambiente (dev) com base na URL mencionada acima para facilitar a testagem
+
+### Para baixar o SQLite 
+
+npm install sqlite3 sqlite --save
+
+### SQLite, Express e Nodemon não precisam ser instalados quando o projeto é puxado do Github, apenas o Node.js precisa

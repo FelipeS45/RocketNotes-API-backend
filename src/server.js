@@ -1,5 +1,7 @@
 require("express-async-errors") // import do express async errors
 
+const database = require("./database/SQLite") // import do BD
+
 const AppError = require("./utils/AppError") // import
 
 const express = require("express") // import do express
@@ -10,6 +12,8 @@ const app = express()
 app.use(express.json())
 
 app.use(routes)
+
+database()
 
 app.use((error, request, response, next) => {
   if(error instanceof AppError){
