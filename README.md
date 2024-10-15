@@ -4,7 +4,7 @@ npm install
 
 # Para rodar o servidor com Nodemon (deixar rodando em um terminal e usar outro para comandos)
 
-npm run dev 
+npm run dev
 
 # Biblioteca Express Async Errors instalada para tratamento de erros
 
@@ -14,12 +14,14 @@ npm install express-async-errors --save
 
 usar URL: localhost:3333/users
 
-### Insomnia consigurado 
+### Insomnia configurado 
 
 URL (BASE_URL) criada dentro do ambiente (dev) com base na URL mencionada acima para facilitar a testagem
 
-### Para baixar o SQLite 
+# Para baixar o SQLite 
 
 npm install sqlite3 sqlite --save
 
-### SQLite, Express e Nodemon não precisam ser instalados quando o projeto é puxado do Github, apenas o Node.js precisa
+# SGBD usado - Beekeeper Studio
+
+# SQLite, Express e Nodemon não precisam ser instalados quando o projeto é puxado do Github, apenas o Node.js precisa
