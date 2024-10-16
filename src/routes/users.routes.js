@@ -4,7 +4,7 @@ const UsersController = require("../controllers/UsersController") // import
 
 const usersRoutes = Router()
 
-function myMiddleware(request, response, next){
+function myMiddleware(request, response, next){ // não vai ser usada (só coloquei aqui pra ficar de exemplo)
   console.log("Middleware ultrapassado!")
 
   if(!request.body.isAdmin){
