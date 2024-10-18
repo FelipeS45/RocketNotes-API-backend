@@ -1,6 +1,6 @@
-# Para instalar as dependências do Node.js (node_modules) sempre quando o projeto for puxado do Github
-
 # SQLite, Express, Bcrypt e Nodemon não precisam ser instalados quando o projeto é puxado do Github, apenas o Node.js precisa
+
+# Para instalar as dependências do Node.js (node_modules) sempre quando o projeto for puxado do Github
 
 ### Comando no terminal
 
@@ -69,3 +69,24 @@ WHERE id = 3;
 
 npm install bcryptjs --save
 
+# Knex.js utilizado como query builder
+
+### Comando no terminal
+
+npm install knex --save
+
+### Para configurar o Knex
+
+npx knex init
+
+Apagar comentários e deixar apenas o comando referente ao BD usado. Ex.: client: 'sqlite3'. Após isso, importar a biblioteca "path" e seguir o exemplo usado nesse projeto. Além disso, usar o "    useNullAsDefault: true", como usado nesse projeto
+
+### Para criar as migrations dentro do Knex (seguir exemplo do projeto nos arquivos knexfile.js e do criado após o comando abaixo)
+
+Migrations - formato de versionar a base de dados. Migrations trabalham na manipulação da base de dados: crianto, alterando ou removendo (alternativa a fazer tudo manualmente).
+
+npx knex migrate:make (nome do arquivo) - para criar o arquivo da tabela
+
+npx knex migrate:latest / npm run migrate- para rodar a tabela e a inserir no BD
+
+Se der erro, apagar as pastas que são criada no BD (knex_migrations e knex_migrations_lock) e rodar o último comando novamente
