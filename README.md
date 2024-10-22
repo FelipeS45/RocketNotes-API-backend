@@ -87,6 +87,6 @@ Migrations - formato de versionar a base de dados. Migrations trabalham na manip
 
 npx knex migrate:make (nome do arquivo) - para criar o arquivo da tabela
 
-npx knex migrate:latest / npm run migrate- para rodar a tabela e a inserir no BD
+npx knex migrate:latest / npm run migrate (adicionando "migrate": "knex migrate:latest" na aba "scripts" do arquivo .json) - para rodar a tabela e a inserir no BD
 
-Se der erro, apagar as pastas que são criada no BD (knex_migrations e knex_migrations_lock) e rodar o último comando novamente
+Se der erro, apagar as pastas que são criadas no BD (knex_migrations e knex_migrations_lock) e rodar o último comando novamente
