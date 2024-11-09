@@ -97,6 +97,15 @@ Se der erro, apagar as pastas que são criadas no BD (knex_migrations e knex_mig
 
 npm install jsonwebtoken
 
-# Para testes
+# Biblioteca Multer para upload de imagens
 
-Usado um usuário de nome João (id = 7), com e-mail (joao@gmail.com) e senha (123)
+### Comando no terminal
+
+npm install multer
+
+# Biblioteca Cors para conectar o Backend com o Frontend
+
+### Comando no terminal
+
+npm install cors
+

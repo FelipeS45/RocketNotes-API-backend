@@ -1,17 +1,19 @@
-require("express-async-errors") // import do express async errors
+require("express-async-errors");
+const express = require("express");
+const cors = require ("cors");
 
-const migrationsRun = require("./database/SQLite/migrations") // import do BD
-
-const AppError = require("./utils/AppError") // import
-
-const express = require("express") // import do express
-
-const routes = require("./routes") // import
+const migrationsRun = require("./database/SQLite/migrations");
+const AppError = require("./utils/AppError");
+const routes = require("./routes");
+const uploadConfig = require("./configs/upload");
 
 migrationsRun()
 
 const app = express()
+app.use(cors())
 app.use(express.json())
+
+app.use("/files", express.static(uploadConfig.UPLOADS_FOLDER))
 
 app.use(routes)
 
