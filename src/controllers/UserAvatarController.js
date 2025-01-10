@@ -14,7 +14,7 @@ class UserAvatarController{
     .where({id: user_id}).first()
 
     if(!user){
-      throw new AppError("Somante usuários autenticados podem mudar o avatar", 401)
+      throw new AppError("Somente usuários autenticados podem mudar o avatar", 401)
     }
 
     if(user.avatar){
@@ -25,9 +25,11 @@ class UserAvatarController{
 
     user.avatar = filename
 
-    await knex("users").update(user)
-
-    return response.json(user).where({id: user_id})
+    await knex("users")
+    .update({ avatar: filename, updated_at: knex.fn.now() })
+    .where({ id: user_id });
+  
+    return response.json(user)
   }
 }
 

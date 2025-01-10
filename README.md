@@ -108,4 +108,3 @@ npm install multer
 ### Comando no terminal
 
 npm install cors
-
