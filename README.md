@@ -108,3 +108,11 @@ npm install multer
 ### Comando no terminal
 
 npm install cors
+
+# Dotenv para criar variáveis de ambiente e lidar com dados sensíveis
+
+### Comando no terminal
+
+npm install dotenv --save
+
+### Usar MD5 hash generator para gerar a chave secreta para o token de autenticação
