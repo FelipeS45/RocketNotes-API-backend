@@ -116,3 +116,23 @@ npm install cors
 npm install dotenv --save
 
 ### Usar MD5 hash generator para gerar a chave secreta para o token de autenticação
+
+# PM2 para manter a API on 24/7
+
+### Comando no terminal 
+
+npx pm2 init
+
+### Link para substituir no arquivo: https://pm2.keymetrics.io/docs/integrations/heroku/
+
+### Após substituir, usar o comando:
+
+npm install pm2
+
+### Após instalar o PM2, substituir o "start" em package.json pelo comando exibido em "Set your package.json"
+
+### Substituir o script por "./src/server.js" no ecossistema do PM2
+
+### Após tudo configurado, rodar a API com o comando:
+
+npm start
